@@ -17,29 +17,28 @@ class XKCDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        loadUser()
-//        comicLoad()
+        comicLoad()
 
     }
     
-    func loadUser() {
-        RandomUserAPIClient.getUser { (result) in
-            switch result {
-            case .failure(let appError):
-                print("Error is.... \(appError)")
-            case .success(let comic):
-                print(comic)
-            }
-        }
-    }
     
     func comicLoad() {
-        ComicAPIClient.getComic { (result) in
+        ComicAPIClient.getComic(number: Int.random(in: 1...2238)) { (result) in
             switch result {
             case .failure(let error):
                 print("the error was \(error)")
             case .success(let comic):
                 print(comic.day)
+                ImageClient.fetchImage(for: comic.img) { [weak self] (result) in
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let image):
+                        DispatchQueue.main.async {
+                            self?.comicImage.image = image
+                        }
+                    }
+                }
             }
         }
     }

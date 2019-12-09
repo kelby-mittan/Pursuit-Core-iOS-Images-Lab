@@ -26,6 +26,7 @@
 		024B094A239DA83100C79FC5 /* PokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0949239DA83100C79FC5 /* PokemonCard.swift */; };
 		024B094C239DA84C00C79FC5 /* PokemonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B094B239DA84C00C79FC5 /* PokemonAPIClient.swift */; };
 		024B0951239DADD200C79FC5 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0950239DADD200C79FC5 /* PokemonCell.swift */; };
+		02D221B4239EF43C00D9A1FF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D221B3239EF43C00D9A1FF /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		024B0949239DA83100C79FC5 /* PokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCard.swift; sourceTree = "<group>"; };
 		024B094B239DA84C00C79FC5 /* PokemonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIClient.swift; sourceTree = "<group>"; };
 		024B0950239DADD200C79FC5 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		02D221B3239EF43C00D9A1FF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		024B094F239DAD3800C79FC5 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				02D221B3239EF43C00D9A1FF /* UserViewController.swift */,
 				024B0943239C8C6E00C79FC5 /* RandomUserAPIClient.swift */,
 				024B0945239C8CEC00C79FC5 /* User.swift */,
 			);
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024B0916239C77ED00C79FC5 /* AppDelegate.swift in Sources */,
+				02D221B4239EF43C00D9A1FF /* UserViewController.swift in Sources */,
 				024B0938239C7EFB00C79FC5 /* XKCDViewController.swift in Sources */,
 				024B0948239DA80100C79FC5 /* PokemonViewController.swift in Sources */,
 				024B0940239C805500C79FC5 /* Comic.swift in Sources */,

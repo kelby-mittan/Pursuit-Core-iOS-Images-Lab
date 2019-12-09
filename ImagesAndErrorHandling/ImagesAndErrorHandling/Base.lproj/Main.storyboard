@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YWD-ER-BXC">
-                                <rect key="frame" x="0.0" y="45" width="414" height="266.5"/>
+                                <rect key="frame" x="0.0" y="45" width="414" height="445.5"/>
                             </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gkM-bU-Bi3">
-                                <rect key="frame" x="160" y="353" width="94" height="32"/>
+                                <rect key="frame" x="160" y="532" width="94" height="32"/>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter comic number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H3-7I-WGJ">
-                                <rect key="frame" x="128" y="415" width="158" height="34"/>
+                                <rect key="frame" x="128" y="594" width="158" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="LQ9-d2-MMw"/>
                                 </constraints>
@@ -30,11 +30,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgP-y6-SjQ">
-                                <rect key="frame" x="73" y="489" width="95" height="30"/>
+                                <rect key="frame" x="73" y="668" width="95" height="30"/>
                                 <state key="normal" title="Most Recent"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7d-JB-Gop">
-                                <rect key="frame" x="254" y="489" width="57" height="30"/>
+                                <rect key="frame" x="254" y="668" width="57" height="30"/>
                                 <state key="normal" title="Random"/>
                             </button>
                         </subviews>
@@ -42,7 +42,7 @@
                         <constraints>
                             <constraint firstItem="YWD-ER-BXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0if-LI-2xz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YWD-ER-BXC" secondAttribute="trailing" id="27j-iC-PYV"/>
-                            <constraint firstItem="YWD-ER-BXC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="2S2-uE-Zfe"/>
+                            <constraint firstItem="YWD-ER-BXC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="2S2-uE-Zfe"/>
                             <constraint firstItem="L7d-JB-Gop" firstAttribute="centerY" secondItem="wgP-y6-SjQ" secondAttribute="centerY" id="B6a-uS-XxF"/>
                             <constraint firstItem="1H3-7I-WGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QlD-fC-Srw"/>
                             <constraint firstItem="wgP-y6-SjQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="S6b-ba-6l6"/>
