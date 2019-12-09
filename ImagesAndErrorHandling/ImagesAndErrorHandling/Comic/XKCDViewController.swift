@@ -18,7 +18,7 @@ class XKCDViewController: UIViewController {
         super.viewDidLoad()
 
 //        loadUser()
-        comicLoad()
+//        comicLoad()
 
     }
     

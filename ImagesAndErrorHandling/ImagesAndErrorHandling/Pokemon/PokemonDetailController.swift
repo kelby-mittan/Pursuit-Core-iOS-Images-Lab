@@ -25,11 +25,26 @@ class PokemonDetailController: UIViewController {
     }
     
     func updateUI() {
+        var weaknessType = ""
+        var theTypes = [String]()
+        var theType = ""
         guard let card = theCard else {
             fatalError()
         }
+        guard let weaknesses = card.weaknesses, let types = card.types else {
+            return
+        }
+        for type in types {
+            theTypes.append(type)
+        }
+        theType = theTypes.joined(separator: ", ")
+        
+        for weakness in weaknesses {
+            weaknessType = weakness.type
+        }
         nameLabel.text = card.name
-//        weaknessLabel.text = "Weaknesses: \(card.weaknesses.type)"
+        typeLabel.text = "Types: \(theType)"
+        weaknessLabel.text = "Weaknesses: \(weaknessType)"
         setLabel.text = "Set: \(card.set)"
         
         ImageClient.fetchImage(for: card.imageUrlHiRes) { [weak self](result) in
@@ -40,7 +55,6 @@ class PokemonDetailController: UIViewController {
                 DispatchQueue.main.async {
                     self?.cardImage.image = image
                 }
-
             }
         }
     }

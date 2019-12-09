@@ -25,7 +25,15 @@ class PokemonViewController: UIViewController {
     var searchQuery = "" {
         didSet {
             if !searchQuery.isEmpty {
-                cardArr = cardArr.filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+                PokemonAPIClient.getCards { (result) in
+                    switch result {
+                    case .failure(let appError):
+                        print(appError)
+                    case .success(var cards):
+                        cards = cards.sorted { $0.name < $1.name }
+                        self.cardArr = cards.filter { $0.name.lowercased().contains(self.searchQuery.lowercased()) }
+                    }
+                }
             }
         }
     }

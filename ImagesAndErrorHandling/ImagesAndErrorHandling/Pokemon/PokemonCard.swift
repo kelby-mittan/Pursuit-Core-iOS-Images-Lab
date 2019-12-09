@@ -17,11 +17,16 @@ struct Card: Decodable {
     let set: String
     let imageUrl: String
     let imageUrlHiRes: String
-//    let weaknesses: Weakness
-//    let types: [String]
+    let weaknesses: [Weakness]?
+    let types: [String]?
     
 }
 
+
 struct Weakness: Decodable {
     let type: String
+    
+    //    private enum CodingKeys: String, CodingKey {
+    //        case type = "type"
+    //    }
 }
