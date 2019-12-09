@@ -152,21 +152,75 @@
             </objects>
             <point key="canvasLocation" x="1760.8695652173915" y="847.76785714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon Detail Controller-->
         <scene sceneID="tYh-yc-n5x">
             <objects>
-                <viewController id="xC0-oV-Cs5" sceneMemberID="viewController">
+                <viewController id="xC0-oV-Cs5" customClass="PokemonDetailController" customModule="ImagesAndErrorHandling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5nA-2I-8tM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CxL-sJ-7Mg">
+                                <rect key="frame" x="52" y="157.5" width="310.5" height="448"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7W-RO-Qr6">
+                                <rect key="frame" x="20" y="108" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-N3-b7Y">
+                                <rect key="frame" x="20" y="625.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weaknesses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-eb-fGw">
+                                <rect key="frame" x="20" y="656" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-ds-wNJ">
+                                <rect key="frame" x="20" y="686.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Su-ds-wNJ" firstAttribute="top" secondItem="dR9-eb-fGw" secondAttribute="bottom" constant="10" id="1Xv-Qp-EUB"/>
+                            <constraint firstItem="p7W-RO-Qr6" firstAttribute="top" secondItem="SpY-ev-X1X" secondAttribute="top" constant="20" id="6Ys-X9-gib"/>
+                            <constraint firstItem="EH7-N3-b7Y" firstAttribute="leading" secondItem="SpY-ev-X1X" secondAttribute="leading" constant="20" id="6h6-DK-wdB"/>
+                            <constraint firstItem="p7W-RO-Qr6" firstAttribute="leading" secondItem="SpY-ev-X1X" secondAttribute="leading" constant="20" id="6iR-kI-k3M"/>
+                            <constraint firstItem="SpY-ev-X1X" firstAttribute="trailing" secondItem="0Su-ds-wNJ" secondAttribute="trailing" constant="20" id="90q-QC-jXY"/>
+                            <constraint firstItem="0Su-ds-wNJ" firstAttribute="leading" secondItem="SpY-ev-X1X" secondAttribute="leading" constant="20" id="Elc-jT-0VV"/>
+                            <constraint firstItem="CxL-sJ-7Mg" firstAttribute="height" secondItem="5nA-2I-8tM" secondAttribute="height" multiplier="0.5" id="GQk-pf-1Bw"/>
+                            <constraint firstItem="SpY-ev-X1X" firstAttribute="trailing" secondItem="EH7-N3-b7Y" secondAttribute="trailing" constant="20" id="Xv7-9W-G65"/>
+                            <constraint firstItem="dR9-eb-fGw" firstAttribute="top" secondItem="EH7-N3-b7Y" secondAttribute="bottom" constant="10" id="ZWe-DA-k7m"/>
+                            <constraint firstItem="SpY-ev-X1X" firstAttribute="trailing" secondItem="dR9-eb-fGw" secondAttribute="trailing" constant="20" id="cg4-uQ-wVf"/>
+                            <constraint firstItem="CxL-sJ-7Mg" firstAttribute="width" secondItem="5nA-2I-8tM" secondAttribute="width" multiplier="0.75" id="cuE-uj-i4d"/>
+                            <constraint firstItem="CxL-sJ-7Mg" firstAttribute="centerX" secondItem="5nA-2I-8tM" secondAttribute="centerX" id="d9r-Cb-CO3"/>
+                            <constraint firstItem="CxL-sJ-7Mg" firstAttribute="top" secondItem="p7W-RO-Qr6" secondAttribute="bottom" constant="16" id="dNM-wV-kwn"/>
+                            <constraint firstItem="EH7-N3-b7Y" firstAttribute="top" secondItem="CxL-sJ-7Mg" secondAttribute="bottom" constant="20" id="eUv-At-euX"/>
+                            <constraint firstItem="SpY-ev-X1X" firstAttribute="trailing" secondItem="p7W-RO-Qr6" secondAttribute="trailing" constant="20" id="pg2-29-K8w"/>
+                            <constraint firstItem="dR9-eb-fGw" firstAttribute="leading" secondItem="SpY-ev-X1X" secondAttribute="leading" constant="20" id="zY3-Qb-CN0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SpY-ev-X1X"/>
                     </view>
                     <navigationItem key="navigationItem" id="90G-4M-H6f"/>
+                    <connections>
+                        <outlet property="cardImage" destination="CxL-sJ-7Mg" id="rqg-nL-y6P"/>
+                        <outlet property="nameLabel" destination="p7W-RO-Qr6" id="Ekc-GP-pfk"/>
+                        <outlet property="setLabel" destination="0Su-ds-wNJ" id="r16-Mn-qjB"/>
+                        <outlet property="typeLabel" destination="EH7-N3-b7Y" id="FzZ-2q-DXK"/>
+                        <outlet property="weaknessLabel" destination="dR9-eb-fGw" id="Oea-g9-0fh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vD-4h-okE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="848"/>
+            <point key="canvasLocation" x="2695.6521739130435" y="847.76785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FRc-Fg-mhe">

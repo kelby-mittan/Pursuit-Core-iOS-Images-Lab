@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0245C19B239DBDD7005F09D1 /* PokemonDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245C19A239DBDD7005F09D1 /* PokemonDetailController.swift */; };
 		024B0916239C77ED00C79FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0915239C77ED00C79FC5 /* AppDelegate.swift */; };
 		024B0918239C77ED00C79FC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0917239C77ED00C79FC5 /* SceneDelegate.swift */; };
 		024B091D239C77ED00C79FC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B091B239C77ED00C79FC5 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0245C19A239DBDD7005F09D1 /* PokemonDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailController.swift; sourceTree = "<group>"; };
 		024B0912239C77ED00C79FC5 /* ImagesAndErrorHandling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesAndErrorHandling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024B0915239C77ED00C79FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024B0917239C77ED00C79FC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				024B0947239DA80100C79FC5 /* PokemonViewController.swift */,
+				0245C19A239DBDD7005F09D1 /* PokemonDetailController.swift */,
 				024B0950239DADD200C79FC5 /* PokemonCell.swift */,
 				024B0949239DA83100C79FC5 /* PokemonCard.swift */,
 				024B094B239DA84C00C79FC5 /* PokemonAPIClient.swift */,
@@ -266,6 +269,7 @@
 				024B0944239C8C6E00C79FC5 /* RandomUserAPIClient.swift in Sources */,
 				024B093E239C7FA600C79FC5 /* AppError.swift in Sources */,
 				024B094A239DA83100C79FC5 /* PokemonCard.swift in Sources */,
+				0245C19B239DBDD7005F09D1 /* PokemonDetailController.swift in Sources */,
 				024B093C239C7F8800C79FC5 /* NetworkHelper.swift in Sources */,
 				024B093A239C7F5100C79FC5 /* ImageClient.swift in Sources */,
 				024B0946239C8CEC00C79FC5 /* User.swift in Sources */,

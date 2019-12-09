@@ -50,6 +50,14 @@ class PokemonViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let pokemonVC = segue.destination as? PokemonDetailController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not load")
+        }
+        pokemonVC.theCard = cardArr[indexPath.row]
+    }
 }
 
 extension PokemonViewController: UITableViewDataSource {

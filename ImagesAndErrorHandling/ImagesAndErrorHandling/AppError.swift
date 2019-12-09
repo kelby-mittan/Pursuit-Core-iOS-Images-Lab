@@ -17,5 +17,6 @@ enum AppError: Error {
     case decodingError(Error)
     case badStatusCode(Int)
     case badMimeType(String)
+    case missingValue
     
 }
