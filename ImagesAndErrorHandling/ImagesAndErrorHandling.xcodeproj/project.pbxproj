@@ -27,6 +27,7 @@
 		024B094C239DA84C00C79FC5 /* PokemonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B094B239DA84C00C79FC5 /* PokemonAPIClient.swift */; };
 		024B0951239DADD200C79FC5 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0950239DADD200C79FC5 /* PokemonCell.swift */; };
 		024F15FE239F30E300CD4B8C /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F15FD239F30E300CD4B8C /* ContactCell.swift */; };
+		024F1602239FECFD00CD4B8C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F1601239FECFD00CD4B8C /* UserDetailViewController.swift */; };
 		02D221B4239EF43C00D9A1FF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D221B3239EF43C00D9A1FF /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		024B094B239DA84C00C79FC5 /* PokemonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIClient.swift; sourceTree = "<group>"; };
 		024B0950239DADD200C79FC5 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		024F15FD239F30E300CD4B8C /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		024F1601239FECFD00CD4B8C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		02D221B3239EF43C00D9A1FF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				02D221B3239EF43C00D9A1FF /* UserViewController.swift */,
+				024F1601239FECFD00CD4B8C /* UserDetailViewController.swift */,
 				024B0943239C8C6E00C79FC5 /* RandomUserAPIClient.swift */,
 				024F15FD239F30E300CD4B8C /* ContactCell.swift */,
 				024B0945239C8CEC00C79FC5 /* User.swift */,
@@ -281,6 +284,7 @@
 				024B093C239C7F8800C79FC5 /* NetworkHelper.swift in Sources */,
 				024B093A239C7F5100C79FC5 /* ImageClient.swift in Sources */,
 				024B0946239C8CEC00C79FC5 /* User.swift in Sources */,
+				024F1602239FECFD00CD4B8C /* UserDetailViewController.swift in Sources */,
 				024B094C239DA84C00C79FC5 /* PokemonAPIClient.swift in Sources */,
 				024B0918239C77ED00C79FC5 /* SceneDelegate.swift in Sources */,
 			);

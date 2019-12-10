@@ -40,6 +40,14 @@ class UserViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userVC = segue.destination as? UserDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        userVC.user = userArr[indexPath.row]
+    }
+
 
 }
 

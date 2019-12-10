@@ -19,6 +19,7 @@ struct Users: Decodable {
     let phone: String
     let dob: DOB
     let picture: Picture
+    let cell: String
     
 }
 

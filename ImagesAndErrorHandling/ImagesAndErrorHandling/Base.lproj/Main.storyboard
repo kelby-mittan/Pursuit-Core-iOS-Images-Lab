@@ -282,7 +282,7 @@
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="847.76785714285711"/>
         </scene>
-        <!--User View Controller-->
+        <!--Contacts-->
         <scene sceneID="K3J-2o-7bo">
             <objects>
                 <viewController id="EAn-Ql-xOW" customClass="UserViewController" customModule="ImagesAndErrorHandling" customModuleProvider="target" sceneMemberID="viewController">
@@ -336,6 +336,7 @@
                                             <outlet property="nameAgeLabel" destination="31d-28-YhU" id="pNf-Rf-8lO"/>
                                             <outlet property="phoneLabel" destination="owR-fr-FqD" id="l6z-Y5-VHi"/>
                                             <outlet property="thumbnailImage" destination="dme-J1-0Y5" id="dWs-Hq-gaw"/>
+                                            <segue destination="ILm-o1-kJo" kind="show" id="aiy-AH-9og"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -350,7 +351,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MM7-8b-bhX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hHK-Xm-QIh"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="hHK-Xm-QIh"/>
                     <connections>
                         <outlet property="tableView" destination="Xgp-xv-eI7" id="jTm-Yq-gyB"/>
                     </connections>
@@ -358,6 +359,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbH-0M-OiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1762.3188405797102" y="1632.5892857142856"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="o19-tF-wsd">
+            <objects>
+                <viewController id="ILm-o1-kJo" customClass="UserDetailViewController" customModule="ImagesAndErrorHandling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z1A-nW-zzh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P71-OV-Oce">
+                                <rect key="frame" x="0.0" y="88" width="414" height="224"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name - age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsr-H8-5GR">
+                                <rect key="frame" x="20" y="328" width="374" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrN-Qo-CnI">
+                                <rect key="frame" x="20" y="363" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1n-Is-0TC">
+                                <rect key="frame" x="20" y="389" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBR-D5-p1f">
+                                <rect key="frame" x="20" y="415" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V1n-Is-0TC" firstAttribute="top" secondItem="yrN-Qo-CnI" secondAttribute="bottom" constant="8" id="0E9-1m-clb"/>
+                            <constraint firstItem="P71-OV-Oce" firstAttribute="centerX" secondItem="z1A-nW-zzh" secondAttribute="centerX" id="6Eh-v5-QlC"/>
+                            <constraint firstItem="XZq-wq-NPv" firstAttribute="trailing" secondItem="Tsr-H8-5GR" secondAttribute="trailing" constant="20" id="ArS-0c-hJs"/>
+                            <constraint firstItem="KBR-D5-p1f" firstAttribute="leading" secondItem="XZq-wq-NPv" secondAttribute="leading" constant="20" id="HL4-Nu-uvv"/>
+                            <constraint firstItem="KBR-D5-p1f" firstAttribute="top" secondItem="V1n-Is-0TC" secondAttribute="bottom" constant="8" id="IYg-kI-9t1"/>
+                            <constraint firstItem="P71-OV-Oce" firstAttribute="top" secondItem="XZq-wq-NPv" secondAttribute="top" id="JJQ-cz-feT"/>
+                            <constraint firstItem="Tsr-H8-5GR" firstAttribute="leading" secondItem="XZq-wq-NPv" secondAttribute="leading" constant="20" id="Ls3-Gn-oXT"/>
+                            <constraint firstItem="yrN-Qo-CnI" firstAttribute="leading" secondItem="XZq-wq-NPv" secondAttribute="leading" constant="20" id="OVQ-Xc-gDX"/>
+                            <constraint firstItem="V1n-Is-0TC" firstAttribute="leading" secondItem="XZq-wq-NPv" secondAttribute="leading" constant="20" id="TWf-g9-ffq"/>
+                            <constraint firstItem="P71-OV-Oce" firstAttribute="height" secondItem="z1A-nW-zzh" secondAttribute="height" multiplier="0.25" id="WXQ-uD-fEK"/>
+                            <constraint firstItem="XZq-wq-NPv" firstAttribute="trailing" secondItem="V1n-Is-0TC" secondAttribute="trailing" constant="20" id="caM-Cs-3x0"/>
+                            <constraint firstItem="Tsr-H8-5GR" firstAttribute="top" secondItem="P71-OV-Oce" secondAttribute="bottom" constant="16" id="ksY-jK-fsb"/>
+                            <constraint firstItem="yrN-Qo-CnI" firstAttribute="top" secondItem="Tsr-H8-5GR" secondAttribute="bottom" constant="8" id="q89-yB-cTh"/>
+                            <constraint firstItem="XZq-wq-NPv" firstAttribute="trailing" secondItem="KBR-D5-p1f" secondAttribute="trailing" constant="20" id="sXF-Dv-UUt"/>
+                            <constraint firstItem="P71-OV-Oce" firstAttribute="width" secondItem="z1A-nW-zzh" secondAttribute="width" id="uiG-3K-pOc"/>
+                            <constraint firstItem="XZq-wq-NPv" firstAttribute="trailing" secondItem="yrN-Qo-CnI" secondAttribute="trailing" constant="20" id="vHx-Iu-DKz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XZq-wq-NPv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="53V-hQ-seC"/>
+                    <connections>
+                        <outlet property="cellLabel" destination="KBR-D5-p1f" id="S83-c4-l4V"/>
+                        <outlet property="largeImage" destination="P71-OV-Oce" id="jJh-he-zqx"/>
+                        <outlet property="locationLabel" destination="yrN-Qo-CnI" id="6dq-ww-GC2"/>
+                        <outlet property="nameAgeLabel" destination="Tsr-H8-5GR" id="Y65-Ng-dTB"/>
+                        <outlet property="phoneLabel" destination="V1n-Is-0TC" id="Xwa-Mb-2uI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVv-5x-OlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="1633"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="vuz-or-8Qb">
