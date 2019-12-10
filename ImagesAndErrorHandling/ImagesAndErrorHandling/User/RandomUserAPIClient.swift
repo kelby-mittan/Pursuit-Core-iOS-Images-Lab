@@ -12,7 +12,7 @@ struct RandomUserAPIClient {
     
     static func getUser(completion: @escaping (Result<[Users], AppError>) -> ()) {
         
-        let url = "https://randomuser.me/api/?results=50"
+        let url = "https://randomuser.me/api/?results=150"
                 
         NetworkHelper.shared.performDataTask(with: url) { (result) in
             switch result {
