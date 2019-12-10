@@ -10,14 +10,19 @@ import Foundation
 
 struct ComicAPIClient {
     
-    static func getComic(number: Int, completion: @escaping (Result<Comic, AppError>) -> ()) {
+    static func getComic(recent: Bool, number: Int, completion: @escaping (Result<Comic, AppError>) -> ()) {
         
          
-//        let num = Int.random(in: 1...2238)
-//        let url = "https://xkcd.com/600/info.0.json"
+//        let num = Int.random(in: 1...2238) // http://xkcd.com/info.0.json
         
         
-        let url = "https://xkcd.com/\(number.description)/info.0.json"
+        var url = String()
+     
+        if !recent {
+            url = "http://xkcd.com/\(number.description)/info.0.json"
+        } else {
+            url = "http://xkcd.com/info.0.json"
+        }
         
         NetworkHelper.shared.performDataTask(with: url) { (result) in
             switch result {
@@ -33,5 +38,4 @@ struct ComicAPIClient {
             }
         }
     }
-    
 }

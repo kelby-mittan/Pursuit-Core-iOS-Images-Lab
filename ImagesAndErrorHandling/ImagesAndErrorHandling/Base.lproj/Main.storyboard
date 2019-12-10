@@ -20,6 +20,9 @@
                             </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gkM-bU-Bi3">
                                 <rect key="frame" x="160" y="532" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ao0-wp-Wdt"/>
+                                </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter comic number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H3-7I-WGJ">
                                 <rect key="frame" x="128" y="594" width="158" height="34"/>
@@ -32,10 +35,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgP-y6-SjQ">
                                 <rect key="frame" x="73" y="668" width="95" height="30"/>
                                 <state key="normal" title="Most Recent"/>
+                                <connections>
+                                    <action selector="recentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbw-10-4Lk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7d-JB-Gop">
                                 <rect key="frame" x="254" y="668" width="57" height="30"/>
                                 <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="randomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7o-Ec-Nke"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,6 +69,8 @@
                     <tabBarItem key="tabBarItem" title="Comic" image="circle.grid.hex.fill" catalog="system" id="7gS-5E-gjx"/>
                     <connections>
                         <outlet property="comicImage" destination="YWD-ER-BXC" id="dwA-HO-5gU"/>
+                        <outlet property="stepperControl" destination="gkM-bU-Bi3" id="Agy-MY-DoS"/>
+                        <outlet property="textField" destination="1H3-7I-WGJ" id="vTc-sN-kmK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
