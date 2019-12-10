@@ -10,6 +10,16 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
+    var userArr = [Users]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +31,10 @@ class UserViewController: UIViewController {
             switch result {
             case .failure(let appError):
                 print("Error is.... \(appError)")
-            case .success(let comic):
-                print(comic)
+            case .success(var users):
+                print(users)
+                users = users.sorted { $0.name.lastName < $1.name.lastName }
+                self.userArr = users
             }
         }
     }

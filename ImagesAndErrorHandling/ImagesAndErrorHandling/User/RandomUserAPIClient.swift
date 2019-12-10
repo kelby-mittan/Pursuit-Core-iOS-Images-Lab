@@ -10,7 +10,7 @@ import Foundation
 
 struct RandomUserAPIClient {
     
-    static func getUser(completion: @escaping (Result<[User], AppError>) -> ()) {
+    static func getUser(completion: @escaping (Result<[Users], AppError>) -> ()) {
         
         let url = "https://randomuser.me/api/?results=50"
                 
@@ -20,7 +20,7 @@ struct RandomUserAPIClient {
                 print(appError)
             case .success(let data):
                 do {
-                    let ranUser = try JSONDecoder().decode(RanUser.self, from: data)
+                    let ranUser = try JSONDecoder().decode(UserData.self, from: data)
                     let user = ranUser.results
                     completion(.success(user))
                 } catch {
